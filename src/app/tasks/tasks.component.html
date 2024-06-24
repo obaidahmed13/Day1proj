@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<div [ngSwitch]="tasks.length > 0">
+    <div *ngSwitchCase="true">
+    <div *ngIf = "tasks.length > 3">
+        There are alot of tasks remaining. Get started!
+    </div>
+    <ul>
+        <li *ngFor = "let task of tasks">
+        {{task}}
+        </li>
+    </ul>
+    </div>
+    <div *ngSwitchCase = "false">
+    No tasks!
+    </div>
+</div>
